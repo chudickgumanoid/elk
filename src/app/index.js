@@ -2,7 +2,7 @@ import { queryClient } from "@/shared/api/queryClient";
 import { VueQueryPlugin } from "@tanstack/vue-query";
 import { createHead } from "@vueuse/head";
 import dayjs from "dayjs";
-import { vMaska } from "maska";
+import { vMaska } from "maska/vue";
 import { createPinia } from "pinia";
 import "virtual:svg-icons-register";
 import { createApp } from "vue";

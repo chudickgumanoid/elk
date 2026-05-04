@@ -53,33 +53,6 @@ export default defineConfig((command, mode) => {
       },
     },
 
-    build: {
-      commonjsOptions: {
-        transformMixedEsModules: true,
-        ignoreTryCatch: false,
-      },
-      esbuild: {
-        pure: ['console.log', 'debugger'],
-      },
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            vueCore: ['vue'],
-            pinia: ['pinia'],
-            vueRouter: ['vue-router'],
-            naiveUi: ['naive-ui'],
-            dateUtils: ['dayjs', 'date-fns'],
-            pdfUtils: ['html2pdf.js'],
-            generalUtils: ['axios'],
-            query: ['@tanstack/vue-query'],
-            i18n: ['vue-i18n'],
-            devTools:
-              mode === 'development' ? ['vite-plugin-vue-devtools'] : [],
-          },
-        },
-      },
-    },
-
     preview: {
       port: env.VITE_DEV_PORT || null,
     },
