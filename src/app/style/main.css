@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Ubuntu", sans-serif;
+
+  --color-primary: #116acc;
+  --color-secondary: #f0f7ff;
+  --color-text: #182233;
+  --color-text-gray: #79747E;
+  --color-danger: #FF2F2F;
+
+  --breakpoint-xs: 24rem;
+  --breakpoint-lg: 30rem;
+
+  --shadow-card: 0px 2px 15px 0px #0000001A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-height: 100vh;
+  height: 100vh;
+  font-size: 16px;
+  background: #fff;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: #374151;
+  height: 100vh;
+  background-color: var(--containerColor);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1264px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+}
+
+.n-config-provider {
+  height: 100%;
+}
+
+.n-select {
+  height: 48px !important;
+}
+
+.n-base-selection {
+  padding: 3px 0px !important;
+  border-radius: 8px !important;
+  border: 1px solid #e5e7eb !important;
+  transition: border-color 0.2s ease-in-out !important;
+}
+
+.n-base-selection:hover {
+  border-color: #1d6addff !important;
+}
+
+.n-base-selection:focus-within {
+  border-color: rgb(29, 106, 221) !important;
+}
+
+.n-base-selection .n-base-selection__border,
+.n-base-selection .n-base-selection__state-border {
+  display: none !important;
+}
+
+.n-base-selection-label {
+  font-weight: 400 !important;
+  color: #191d23 !important;
+}
+
+.n-base-select-option--selected .n-base-select-option__content {
+  color: #1d6addff !important;
+}
+
+.n-base-select-option {
+  transition: none !important;
+}
+
+.n-base-select-menu .n-base-select-option .n-base-select-option__check {
+  color: #1d6addff !important;
+}
+
+.n-pagination .n-pagination-item:not(.n-pagination-item--disabled).n-pagination-item--active {
+  background: #f4372e0d !important;
+}
+
+.n-data-table .n-data-table__pagination {
+  justify-content: center !important;
+}
+
+.n-base-icon {
+  height: auto !important;
+  width: auto !important;
+}
+
+.n-data-table-td {
+  font-size: 14px !important;
+}
+
+.n-dialog.n-dialog--icon-left .n-dialog__icon {
+  display: none;
+}
+
+.n-dialog .n-dialog__close {
+  margin: 12px 12px 0 0 !important;
+}
+
+.n-dialog.n-dialog--icon-left.n-dialog--closable .n-dialog__title {
+  padding-right: 32px !important;
+}
+
+.n-base-select-option__content {
+  width: 100%;
+}
+
+.m-shadow {
+  box-shadow: 0px 3px 16px 0px #0000001a;
+}
+
+.fade-slide-down-enter-active,
+.fade-slide-down-leave-active {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.fade-slide-down-enter-from {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.fade-slide-down-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-slide-down-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-slide-down-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.n-modal-body-wrapper {
+  @media (max-width: 500px) {
+    margin: 0 12px !important;
+  }
+}
+
+.n-form-item-label__asterisk {
+  opacity: 0 !important;
+}
